@@ -61,7 +61,6 @@
             display: block;
         }
 
-        /* Inputs */
         select, input[type="number"] {
             width: 100%;
             padding: 8px;
@@ -88,7 +87,6 @@
             color: #000;
         }
 
-        /* Loot Row */
         .loot-row {
             display: flex;
             justify-content: space-between;
@@ -120,7 +118,7 @@
             display: block;
         }
 
-        /* Gold Locations on your specific image */
+        /* Hotspots matched to your image boxes */
         .hotspot {
             position: absolute;
             cursor: pointer;
@@ -137,7 +135,6 @@
             box-shadow: 0 0 10px #fff;
         }
 
-        /* Payouts */
         .player-box {
             display: flex;
             justify-content: space-between;
@@ -219,11 +216,21 @@
             <span class="card-header">03_COMPOUND_MAP_OVERLAY</span>
             <div class="map-wrapper">
                 <img src="map.png" class="map-img">
-                <!-- Exact locations for Gold on your image -->
-                <div id="room-office" class="hotspot" style="top: 51%; left: 38%; width: 8%; height: 8%;" onclick="toggleRoom('room-office')"></div>
-                <div id="room-north" class="hotspot" style="top: 45%; left: 50%; width: 6%; height: 6%;" onclick="toggleRoom('room-north')"></div>
-                <div id="room-west" class="hotspot" style="top: 52%; left: 30%; width: 6%; height: 6%;" onclick="toggleRoom('room-west')"></div>
-                <div id="room-south" class="hotspot" style="top: 75%; left: 40%; width: 6%; height: 6%;" onclick="toggleRoom('room-south')"></div>
+                
+                <!-- 1. Office/Basement (Merged into one central box) -->
+                <div id="room-office" class="hotspot" style="top: 48%; left: 37%; width: 10%; height: 10%;" onclick="toggleRoom('room-office')"></div>
+                
+                <!-- 2. North Storage (Top Right of Office) -->
+                <div id="room-north" class="hotspot" style="top: 43%; left: 49%; width: 7%; height: 7%;" onclick="toggleRoom('room-north')"></div>
+                
+                <!-- 3. West Storage (Left of Office) -->
+                <div id="room-west" class="hotspot" style="top: 48%; left: 28%; width: 7%; height: 7%;" onclick="toggleRoom('room-west')"></div>
+                
+                <!-- 4. South Storage (Bottom of Office) -->
+                <div id="room-south" class="hotspot" style="top: 68%; left: 38%; width: 7%; height: 7%;" onclick="toggleRoom('room-south')"></div>
+
+                <!-- 5. East Storage (Far Right - The missing one) -->
+                <div id="room-east" class="hotspot" style="top: 50%; left: 79%; width: 7%; height: 7%;" onclick="toggleRoom('room-east')"></div>
             </div>
 
             <div style="margin-top:15px;">
